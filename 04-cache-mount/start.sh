@@ -9,6 +9,5 @@ if ! [ -x "$(command -v docker)" ]; then
     echo 'Error: docker is not installed.' >&2
     exit 1
 fi
-docker builder prune -f 
-docker image prune -f
+
 screen -c .screenrc
