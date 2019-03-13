@@ -1,0 +1,4 @@
+screen -t "Legacy" bash -ic 'DOCKER_BUILDKIT=0 docker build --no-cache -t test1 .; docker rmi test1'
+split
+focus
+screen -t "BuildKit" bash -ic 'DOCKER_BUILDKIT=1 docker build --no-cache -t test2 .; docker rmi test2'

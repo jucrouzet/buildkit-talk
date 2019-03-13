@@ -1,0 +1,9 @@
+#syntax=docker/dockerfile:experimental
+FROM alpine
+
+WORKDIR /
+RUN \
+    --mount=target=./files \
+    tar -xzf /files/archive.tgz
+
+CMD /start.sh

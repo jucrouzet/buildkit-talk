@@ -1,0 +1,4 @@
+screen -t "WITHOUT cache mount" bash -ic 'echo "First build ..."; sleep 2; docker rmi test1; DOCKER_BUILDKIT=1 docker build -t test1 -f Dockerfile.1 .; docker rmi test1; echo "Second build ..."; sleep 2; DOCKER_BUILDKIT=1 docker build -t test1  -f Dockerfile.2 .; docker rmi test1;'
+split
+focus
+screen -t "WITH cache mount" bash -ic 'echo "First build ..."; sleep 2; docker rmi test2; DOCKER_BUILDKIT=1 docker build -f Dockerfile.cached.1 -t test2 .; docker rmi test2; echo "Second build ..."; sleep 2; DOCKER_BUILDKIT=1 docker build -f Dockerfile.cached.2 -t test2 .; docker rmi test2'
