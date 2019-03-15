@@ -4,9 +4,9 @@ Démos présentées lors du Meetup ["Modern Devops Paris" du 12/03/2019](https:/
 
 
 
-Pour éxécuter les démos, vous devez avoir installé sur le poste :
+Pour exécuter les démos, vous devez avoir installé sur le poste :
 
-- screen (Normalement déjà la sinon apt/brew/etc)
+- screen (Normalement déjà là sinon apt/brew/etc)
 - Docker en version >= 18.09
 
 
